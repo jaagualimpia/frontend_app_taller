@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Col, Row } from 'react-bootstrap';
 
 interface SketchPadProps {
     width: number;
@@ -57,15 +57,21 @@ const SketchPad: React.FC<SketchPadProps> = ({ width, height, onImageCapture }) 
 
     return (
         <>
-            <canvas
-                ref={canvasRef}
-                onMouseDown={startDrawing}
-                onMouseMove={draw}
-                onMouseUp={stopDrawing}
-                onMouseOut={stopDrawing}
-                style={{ border: '1px solid #000000' }}
-            />
-            <Button onClick={captureImage} variant='primary'>Capturar imagen</Button>
+            <div className="text-center mt-5">
+                <canvas
+                    ref={canvasRef}
+                    onMouseDown={startDrawing}
+                    onMouseMove={draw}
+                    onMouseUp={stopDrawing}
+                    onMouseOut={stopDrawing}
+                    style={{ border: '1px solid #000000' }}
+                />
+            </div>
+            <Row className='mt-3 text-center'>
+                <Col>
+                    <Button onClick={captureImage} variant='primary' className='px-4'>Capturar imagen</Button>
+                </Col>
+            </Row>
         </>
     );
 };

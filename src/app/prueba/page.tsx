@@ -22,9 +22,7 @@ const DrawNumber = () => {
 
   return (
     <Container>
-        <SketchPad width={280} height={280} onImageCapture={handleImageCapture} />
-        
-        <button>Predecir Número</button>
+      <SketchPad width={280} height={280} onImageCapture={handleImageCapture} />
     </Container>
 
   );
