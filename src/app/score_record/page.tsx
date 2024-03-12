@@ -14,7 +14,7 @@ export default function ScoreRecordPage() {
     const fetchData = async () => {
       const result = await getClassificationOrderedByScore()
       setClassificationItems(result.map((element: { [key: string]: any }) => {
-        return <ClassifactionTableItem username={element.username} modelName={element.modelName} score={element.score} />
+        return <ClassifactionTableItem username={element.username} modelName={element.algorithm} score={element.score} />
       }))
 
     }

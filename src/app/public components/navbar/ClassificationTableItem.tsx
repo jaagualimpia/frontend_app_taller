@@ -1,5 +1,6 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { Button } from "react-bootstrap"
 
 interface classificationTableItemProps {
@@ -9,6 +10,12 @@ interface classificationTableItemProps {
 }
 
 export const ClassifactionTableItem = ({ username, score, modelName }: classificationTableItemProps) => {
+    const router = useRouter()
+    
+    const handleOnClick = () => {
+        router.push(`/prueba?username=${username}&algorithm=${modelName}`)
+    }
+
     return (
         <>
             <tr>
@@ -16,7 +23,7 @@ export const ClassifactionTableItem = ({ username, score, modelName }: classific
                 <td>{modelName}</td>
                 <td>{Math.ceil(score * 100)}%</td>
                 <td>
-                    <Button variant="dark"> Probar este modelo</Button>
+                    <Button variant="dark" onClick={handleOnClick}> Probar este modelo</Button>
                 </td>
             </tr>
         </>

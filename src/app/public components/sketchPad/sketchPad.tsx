@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Button } from 'react-bootstrap';
 
 interface SketchPadProps {
     width: number;
@@ -18,7 +19,7 @@ const SketchPad: React.FC<SketchPadProps> = ({ width, height, onImageCapture }) 
             canvas.height = height;
             const context = canvas.getContext('2d');
             if (context) {
-                context.lineWidth = 10;
+                context.lineWidth = 30;
                 context.lineCap = 'round';
                 context.strokeStyle = '#000000';
                 setCtx(context);
@@ -64,7 +65,7 @@ const SketchPad: React.FC<SketchPadProps> = ({ width, height, onImageCapture }) 
                 onMouseOut={stopDrawing}
                 style={{ border: '1px solid #000000' }}
             />
-            <button onClick={captureImage}>Capture Image</button>
+            <Button onClick={captureImage} variant='primary'>Capturar imagen</Button>
         </>
     );
 };
