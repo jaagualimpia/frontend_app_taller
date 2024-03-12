@@ -24,8 +24,8 @@ export default function ScoreRecordPage() {
 
   return (
     <>
-      <p className="fw-medium">
-        Esta es la lista de todos los modelos que se han entrenado y sus respectivos puntajes
+      <p className="fw-medium fs-2 text-center my-3">
+        Esta es la lista de todos los modelos que se han entrenado y sus respectivos puntajes: 
       </p>
       <Container>
         <table className="table table-striped">

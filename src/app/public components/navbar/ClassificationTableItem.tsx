@@ -14,7 +14,7 @@ export const ClassifactionTableItem = ({ username, score, modelName }: classific
             <tr>
                 <td>{username}</td>
                 <td>{modelName}</td>
-                <td>{Math.fround(score) * 100}%</td>
+                <td>{Math.ceil(score * 100)}%</td>
                 <td>
                     <Button variant="dark"> Probar este modelo</Button>
                 </td>
