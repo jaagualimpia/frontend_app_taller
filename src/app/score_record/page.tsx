@@ -3,7 +3,6 @@
 import { getClassificationOrderedByScore } from "@/services/classification.service";
 import { useEffect, useState } from "react";
 import { ClassifactionTableItem } from "../public components/navbar/ClassificationTableItem";
-import { ClassificationResultDto } from "@/dtos/classificationResults.dto";
 import { Container } from "react-bootstrap";
 
 export default function ScoreRecordPage() {
@@ -14,7 +13,7 @@ export default function ScoreRecordPage() {
     const fetchData = async () => {
       const result = await getClassificationOrderedByScore()
       setClassificationItems(result.map((element: { [key: string]: any }) => {
-        return <ClassifactionTableItem username={element.username} modelName={element.algorithm} score={element.score} />
+        return <ClassifactionTableItem key={element.id} username={element.username} modelName={element.algorithm} score={element.score} />
       }))
 
     }

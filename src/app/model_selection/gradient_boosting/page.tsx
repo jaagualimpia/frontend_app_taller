@@ -62,7 +62,7 @@ export default function GradientBoosting() {
   return (
     <>
       <p className="fs-3 fw-bold text-center my-3">
-        Ingresa los datos para el modelo <i>"Extreme Gradient Boosting Classifier":</i>
+        Ingresa los datos para el modelo <i>&quot; Extreme Gradient Boosting Classifier &quot;:</i>
       </p>
 
       <Container>

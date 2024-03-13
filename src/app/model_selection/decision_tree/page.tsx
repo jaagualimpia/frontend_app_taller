@@ -46,7 +46,7 @@ export default function DecisionTreePage() {
   return (
     <>
       <p className="fs-3 fw-bold text-center my-3">
-        Ingresa los datos para el modelo <i>"Decision Tree"</i>
+        Ingresa los datos para el modelo <i>&quot; Decision Tree &quot;</i>
       </p>
 
       <Container>

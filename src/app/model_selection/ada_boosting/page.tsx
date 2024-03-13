@@ -50,7 +50,7 @@ export default function AdaBoostingPage() {
   return (
     <>
       <p className="fs-3 fw-bold text-center my-3">
-        Ingresa los datos para el modelo <i>"Ada Boost Classifier":</i>
+        Ingresa los datos para el modelo <i>&quot; Ada Boost Classifier &quot;:</i>
       </p>
 
       <Container>

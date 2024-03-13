@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Col, Container, Row } from "react-bootstrap";
+import Image from "next/image";
 
 export default function ModelSelectionPage() {
   return (

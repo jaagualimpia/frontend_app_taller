@@ -45,7 +45,7 @@ export default function RandomForestPage() {
   return (
     <>
       <p className="fs-3 fw-bold text-center my-3">
-        Ingresa los datos para el modelo <i>"Random Forest Classifier"</i>
+        Ingresa los datos para el modelo <i>&quot; Random Forest Classifier &quot;</i>
       </p>
 
       <Container>
